@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid;
+            padding: 2px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: darkslategray;
+            color: white;
+        }
+
+        aside {
+            width: 30%;
+            padding-left: 15px;
+            margin-left: 15px;
+            float: right;
+            font-style: italic;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <fieldset>
+        <legend>1. Normal</legend>
+        <h1>Đây là h1</h1>
+        <h2>Đây là h2</h2>
+        <h3>Đây là h3</h3>
+        <h4>Đây là h4</h4>
+        <h5>Đây là h5</h5>
+        <p>Câu được đặt trong thẻ p</p>
+        <span>Đây là đoạn văn bản thông thường</span>
+        <strong>được in đậm</strong><br>
+        <hr>
+
+
+        <ul>
+            <span>Bulleted list use ul</span>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ol>
+            <span>Number list use ol</span>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+        <a href="yahoo.com">Google.com</a>
+        <p>Ví dụ về đoạn văn bản có từ được định dạng<i> in nghiên</i> </p>
+        <img src="https://c.tenor.com/VFFJ8Ei3C2IAAAAM/rickroll-rick.gif" alt="a gif">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1AEHzoTXa5I" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </fieldset>
+    <fieldset>
+        <legend>2. Form</legend>
+        <form action="">
+            <div>
+                <label for="username">Username:</label>
+                <!-- For ->> input id -->
+                <input type="text" id="username">
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" name="" id="password" required>
+            </div>
+            <div>
+                <select name="" id="">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                </select>
+            </div>
+            <div>
+                <label for="decription">decription</label>
+                <textarea name="" id="decription" cols="30" rows="10"></textarea>
+            </div>
+            <div>
+                <label for="gender">Gender:</label>
+                <label for="Male">Male</label>
+                <input type="radio" name="Gender" id="Male">
+                <label for="female">Female</label>
+                <input type="radio" name="Gender" id="female">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>3. Table</legend>
+        <table style="border: 1px solid; border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <td>Collum 1 </td>
+                    <td>Collum 2</td>
+                    <td>Collum 3</td>
+                    <td>Collum 4</td>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="3">rowspan</td>
+                    <td>1 </td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td colspan="2">colspan </td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>5 </td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+            </tbody>
+        </table>
+        <tfoot>
+            <tr>
+                <td colspan="3">Tfoot có thể dùng để ghi chú ?</td>
+            </tr>
+        </tfoot>
+    </fieldset>
+    <fieldset>
+        <legend>HTML 5</legend>
+        <header>This is header</header>
+        <aside>
+            <p>The Epcot center is a theme park at Walt Disney World Resort featuring exciting attractions,
+                international pavilions, award-winning fireworks and seasonal special events.</p>
+        </aside>
+        <main>
+            <h1>Most Popular Browsers</h1>
+            <p>Chrome, Firefox, and Edge are the most used browsers today.</p>
+
+            <article>
+                <h2>Google Chrome</h2>
+                <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most
+                    popular web browser today!</p>
+            </article>
+
+            <article>
+                <h2>Mozilla Firefox</h2>
+                <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second
+                    most popular web browser since <time datetime="2018-01-0 00:00"> January, 2018.</time></p>
+            </article>
+
+            <article>
+                <h2>Microsoft Edge</h2>
+                <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced
+                    <mark>Internet Explorer </mark>.</p>
+
+                <video src="./myvid.mp4"></video>
+            </article>
+
+        </main>
+        <address>
+            Written by <a href="mailto:hnguyentrung20@gmail.com">Hieu Nguyen</a>.<br>
+            Visit us at:<br>
+            https://github.com/hnguyentrung20<br>
+            Disneyland<br>
+            Laos
+        </address>
+        <footer>All of those just for SEO ?</footer>
+    </fieldset>
+
+</body>
+
+</html>
