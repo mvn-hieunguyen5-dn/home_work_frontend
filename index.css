@@ -1,0 +1,129 @@
+/* Basic selector ----------- */
+.section-selector {
+  background-color: rgb(161 161 170);
+}
+.section-Pseudo {
+  margin-top: 20px;
+}
+.box {
+  height: 50px;
+  min-width: 50px;
+  background-color: grey;
+}
+/* Child selector----------- */
+.parent > li {
+  color: red;
+}
+.parent > li:nth-child(2n) {
+  color: yellow;
+}
+.parent > li:last-child {
+  color: blue;
+}
+/* Atrribute selector-------- */
+.contain-box {
+  display: flex;
+  place-items: center;
+}
+.contain-box > .box {
+  margin-left: 5px;
+}
+.box[id~="the-chosen-one"] {
+  border: 5px solid yellow;
+}
+
+/* Universal selector----- */
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Pseudo-class------------ */
+input:hover {
+  border-color: crimson;
+}
+input:focus {
+  /* border-color: rgb(40, 28, 197); */
+  outline-color: green;
+}
+
+/* peseudo-element--------- */
+.news {
+  width: 900px;
+  padding: 4px;
+  border-radius: 2mm;
+  border-color: black;
+  border-style: solid;
+  overflow: auto;
+}
+.news > p::first-line {
+  color: #ff0000;
+  font-size: x-large;
+}
+.news::before {
+  content: "Breaking news";
+}
+.picture{
+  width: 400px;
+  float: right;
+  clear: right;
+}
+/* Box model--------------- */
+.section-style {
+  display: grid;
+}
+.box-model {
+  width: fit-content;
+  padding: 70px;
+  margin: 30px;
+  background-color: cadetblue;
+  border-color: #ff0000;
+  border: 4px;
+  border-style: solid;
+}
+
+.mother-box > .box {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+.mother-box {
+  height: 500px;
+  width: 500px;
+  background-color: gold;
+  position: relative;
+  display: block;
+  place-items: center;
+}
+.top {
+  top: 30px;
+}
+.bottom {
+  bottom: 30px;
+}
+.right {
+  right: 30px;
+}
+.left {
+  left: 30px;
+}
+.content {
+  font-size: 50px;
+  line-height: 100px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  color:white;
+  position: absolute;
+  /* set the the position of the helper container into the middle of its space */
+  top: 50%;
+  left: 50%;
+  /* make sure padding and margin do not disturb the calculation of the center point */
+  padding: 0;
+  margin: 0;
+  /* using centers for the transform */
+  transform-origin: center center;
+  /* calling calc() function for the calculation to move left and up the element from the center point */
+  /* transform: translateX(calc((100% / 2) * (-1)))
+    translateY(calc((100% / 2) * (-1))); */
+      transform: translateX(-50%)
+    translateY(-50%);
+
+}
