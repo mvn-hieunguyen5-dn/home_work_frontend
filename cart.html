@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <header>
+    <a href="/" class="mainlogo flex-grow">
+      Back to home page
+    </a>
+    <a href="/cart.html" class="cart">
+      <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+      <p class="cart-number" id="cartnumber"></p>
+    </a>
+
+    <!-- <p >Sea shop</p> -->
+
+  </header>
+  <main>
+    <h1>Cart component</h1>
+    <section class="shop">
+      <table>
+        <thead>
+          <tr>
+            <td>ID</td>
+            <td>Picture</td>
+            <td>Name</td>
+            <td>Quantity</td>
+            <td>Price</td>
+            <td>Action</td>
+          </tr>
+        </thead>
+        <tbody id="bodycart">
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3"></td>
+            <td class="total">Total:</td>
+            <td class="total" id="total">0</td>
+            <td class="">
+              <button class='add-button' onclick='removeAll()'>Remove all</button>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+  </main>
+  <div id="data"></div>
+  <script src="cart.js"></script>
+</body>
+<img src="" alt="" srcset="">
+
+</html>
