@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>API example</title>
+</head>
+
+<body>
+  <div>
+    <h2>The list of User</h2>
+    <div class="page">
+      <p>Page:</p>
+      <input list="num" id="page"">
+      <datalist id="num">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+      </datalist>
+    </div>
+
+
+    <table>
+      <thead>
+        <tr>
+          <td>ID</td>
+          <td>First name</td>
+          <td>Last name</td>
+          <td>Avatar</td>
+          <td>Email</td>
+        </tr>
+      </thead>
+      <tbody id="users">
+
+      </tbody>
+    </table>
+    <div id="answer"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
