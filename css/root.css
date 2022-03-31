@@ -1,0 +1,165 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+main {
+  display: flex;
+  background-color: #393e46;
+}
+h1 {
+  font-size: 30px;
+  color: #ffd369;
+}
+img {
+  background-color: #ffd369;
+}
+p {
+  color: white;
+  font-size: 15px;
+}
+.container {
+  padding-inline: 20px;
+  display: block;
+}
+.left-bar {
+  height: 100vh;
+  background-color: #222831;
+  width: 300px;
+}
+.user {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+}
+.avatar {
+  height: 70px;
+  width: 70px;
+  background-color: beige;
+  border-radius: 9999px;
+  text-align: center;
+}
+.direction {
+  margin-top: 10px;
+  font-size: 20px;
+}
+ul > * {
+  list-style-type: none;
+  margin-top: 10px;
+}
+li {
+  text-decoration: none;
+  list-style: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  -webkit-transition: background 2s; /* For Safari 3.0 to 6.0 */
+  transition: background 1s;
+  height: 50px;
+}
+li:hover {
+  background: #05595b;
+}
+a {
+  text-decoration: none;
+  color: wheat;
+}
+li > a {
+  margin-left: 10px;
+}
+.userdata {
+  margin-left: 10px;
+}
+.userdata > span {
+  font-size: 20px;
+  color: white;
+}
+.vertical {
+  height: 100%;
+  width: 4px;
+  background-color: #ffd369;
+}
+.content {
+  height: 100vh;
+  overflow-x: auto;
+  flex-grow: 1;
+}
+.content > .container {
+  padding: 30px 70px;
+}
+.action {
+  margin-top: 30px;
+}
+.ebutton {
+  padding: 10px 60px;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #ffffff00;
+  color: #ffd369;
+  border-radius: 1ch;
+  border: 2px solid;
+  border-color: #ffd369;
+}
+.ebutton:hover {
+  background-color: #ffd369;
+  color: black;
+}
+.edbutton {
+  padding: 10px 60px;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #ffd369;
+  color: #222831;
+  border-radius: 1ch;
+  border: 2px solid;
+  border-color: #ffd369;
+}
+.edbutton:hover {
+  background-color: #ffd26900;
+  color: #ffd369;
+}
+.dbutton {
+  padding: 10px 60px;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #c74b50;
+  color: #ece4d1;
+  border-radius: 1ch;
+  border: 2px solid;
+  border-color: #c74b50;
+  margin-left: 40px;
+}
+.deleteB {
+  font-size: 20px;
+  color: #f24a72;
+}
+.deleteB:hover {
+  color: wheat;
+}
+.dbutton:hover {
+  border-color: #ffd369;
+  background-color: #c74b50;
+  color: #ffd369;
+}
+
+.searchbox {
+  padding: 10px 20px;
+  padding-right: 40px;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #ffffff00;
+  color: #ffd369;
+  border-radius: 1ch;
+  border: 2px solid;
+  border-color: #ffd369;
+}
+.fa-magnifying-glass {
+  margin-left: -45px;
+  font-size: 20px;
+  color: #ffd369;
+}
+.fa-building-columns {
+  font-size: 60px;
+  color: #ffd369;
+}

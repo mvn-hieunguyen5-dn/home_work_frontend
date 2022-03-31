@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/root.css">
+  <link rel="stylesheet" href="css/table.css">
+  <script src="https://kit.fontawesome.com/8b76271ca4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <main>
+    <section class="left-bar" id="left-bar">
+    </section>
+    <section class="content">
+      <div class="container">
+        
+          <h1>Detail cargo </h1>
+          <table>
+            <thead>
+              <tr>
+                <td colspan="5">Shipment report ID : <span id="sid"></span> </td>
+
+              </tr>
+            </thead>
+            <tbody id="body">
+              <tr>
+                <td class="light">Ship ID</td>
+                <td id="shipID">N/A</td>
+                <td class="light">Company:</td>
+                <td id="comName">N/A</td>
+                <td rowspan="4" class="none"><img id="shipImg" src="./src/loading-page.gif" height="300px"
+                    width="500px"></td>
+              </tr>
+              <tr>
+                <td class="light">Ship name:</td>
+                <td id="shipName">N/A</td>
+                <td class="light">Status:</td>
+                <td id="status">N/a</td>
+              </tr>
+              <tr>
+                <td class="light">Departure place</td>
+                <td id="from">N/A</td>
+                <td class="light">Landing place</td>
+                <td id="to">N/A</td>
+              </tr>
+              <tr>
+                <td class="light">Start date:</td>
+                <td id="startDate">N/A</td>
+                <td class="light">End date:</td>
+                <td id="endDate">N/A</td>
+              </tr>
+              <tr>
+                <td class="light">License code:</td>
+                <td id="lcode">N/A</td>
+                <td class="light">Expired:</td>
+                <td id="exdate">N/A</td>
+                <td class="light">Unique characteristics</td>
+              </tr>
+              <tr>
+                <td class="light">*Tonnage:</td>
+                <td>N/A</td>
+                <td class="light">*Type:</td>
+                <td id="shipType">N/A</td>
+                <td>N/A</td>
+              </tr>
+            </tbody>
+          </table>
+          <span>* : ship information</span>
+          <div class="action">
+            <button class="ebutton" onclick="window._turnEdit()" type="button"><i class="fa-solid fa-pen-to-square"></i> Edit</button>
+            <button class="dbutton" onclick="window._deleteInTable()" type="button"><i class="fa-solid fa-trash-can"></i>
+              Delete</button>
+          </div>
+
+      </div>
+
+    </section>
+  </main>
+  <script type="module" src="js/index.js"></script>
+  <script type="module" src="js/detailsShipment.js"></script>
+
+</body>
+
+</html>
