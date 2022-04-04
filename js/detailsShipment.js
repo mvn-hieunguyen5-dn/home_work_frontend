@@ -1,7 +1,4 @@
 import {
-  relativeFind,
-  getData,
-  setData,
   deleteByID,
   getDataByID,
   find,

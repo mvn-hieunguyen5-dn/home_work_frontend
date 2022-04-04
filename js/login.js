@@ -10,7 +10,7 @@ let inter = setInterval(() => {
   if (i == inputlogin.length - 1) {
     clearInterval(inter);
     setTimeout(() => {
-      location.href="http://localhost:5500/";
+      location.href="./";
     }, 1000);
   }
   i++;

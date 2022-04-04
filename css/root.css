@@ -26,6 +26,8 @@ p {
   height: 100vh;
   background-color: #222831;
   width: 300px;
+  /* flex-grow: 4; */
+  flex-shrink: 0;
 }
 .user {
   margin-top: 50px;
@@ -54,16 +56,26 @@ li {
   display: flex;
   align-items: center;
   font-size: 25px;
-  -webkit-transition: background 2s; /* For Safari 3.0 to 6.0 */
-  transition: background 1s;
+  -webkit-transition: background 1s; /* For Safari 3.0 to 6.0 */
+  transition: background 0.5s;
   height: 50px;
+  padding: 5px 10px;
+  border-radius: 0.5rem; 
+  background-color: #393E46;
 }
 li:hover {
-  background: #05595b;
+  background: #FFD369;
+  color:#222831;
 }
 a {
   text-decoration: none;
   color: wheat;
+}
+li:hover a {
+  color:#222831;
+}
+li:hover .vertical{
+  background-color:#222831;
 }
 li > a {
   margin-left: 10px;
@@ -79,6 +91,7 @@ li > a {
   height: 100%;
   width: 4px;
   background-color: #ffd369;
+  border-radius: 1rem; 
 }
 .content {
   height: 100vh;
@@ -87,9 +100,6 @@ li > a {
 }
 .content > .container {
   padding: 30px 70px;
-}
-.action {
-  margin-top: 30px;
 }
 .ebutton {
   padding: 10px 60px;
@@ -162,4 +172,17 @@ li > a {
 .fa-building-columns {
   font-size: 60px;
   color: #ffd369;
+}
+@media only screen and (max-width: 1023px) {
+  .panel-text {
+    display: none;
+  }
+  .left-bar {
+    width: 120px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .left-bar {
+    display: none;
+  }
 }

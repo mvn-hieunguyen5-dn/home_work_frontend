@@ -1,0 +1,11 @@
+td {
+  min-width: 175px;
+}
+tr {
+  border: 1px solid #393e46;
+  -webkit-transition: background 0.2s; /* For Safari 3.0 to 6.0 */
+  transition: background 0.3s;
+}
+td:nth-child(2n-1) {
+  width: 20%;
+}
