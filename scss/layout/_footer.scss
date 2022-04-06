@@ -1,0 +1,48 @@
+footer {
+  background-color: map-get($colors, background2);
+  .footer-middle-row {
+    padding-block: 100px;
+    .container {
+      .row {
+        justify-content: center;
+        align-content: center;
+        display: flex;
+        gap: 100px;
+        li:first-child {
+          padding-top: 40px;
+        }
+        li {
+          color: map-get($colors, txt-gray);
+          padding-top: 20px;
+          a {
+            color: map-get($colors, txt-gray);
+          }
+        }
+      }
+    }
+  }
+  .footer-bottom {
+    background-color: white;
+    padding-block: 20px;
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      ul {
+        display: flex;
+      }
+    }
+  }
+}
+@include respond-below(large) {
+  footer {
+    .footer-middle-row {
+      .container {
+        .row {
+          gap: 5px;
+        }
+      }
+    }
+  }
+}

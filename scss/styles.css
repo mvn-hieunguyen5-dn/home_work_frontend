@@ -841,7 +841,7 @@ footer .footer-bottom .container ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: calc(calc(100% - 10px * 4) / 5);
+  width: calc(calc(100% - 10px * 5) / 6);
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-flex: 0 !important;
