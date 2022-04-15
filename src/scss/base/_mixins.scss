@@ -1,0 +1,192 @@
+// === RESPOND ABOVE ===
+// How to use: @include respond-above(small) {}
+@mixin respond-above($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+// === RESPOND BELOW ===
+// How to use: @include respond-below(small) {}
+@mixin respond-below($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (max-width: ($breakpoint-value - 1)) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+// === RESPOND BETWEEN ===
+// How to use: @include respond-between(small, medium) {};
+@mixin respond-between($lower, $upper) {
+  @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
+    $lower-breakpoint: map-get($breakpoints, $lower);
+    $upper-breakpoint: map-get($breakpoints, $upper);
+
+    @media (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
+      @content;
+    }
+  }
+
+  @else {
+    @if (map-has-key($breakpoints, $lower)==false) {
+      @warn 'Your lower breakpoint was invalid: #{$lower}.';
+    }
+
+    @if (map-has-key($breakpoints, $upper)==false) {
+      @warn 'Your upper breakpoint was invalid: #{$upper}.';
+    }
+  }
+}
+
+// === CONVERT Px To Rem === //
+// How to use: @include pxRem(font-size, 16);
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+@function convertRootPxToEm($value) {
+
+  // Check for null:
+  @if ($value==null) {
+    @return $value;
+  }
+
+  // Assume em:
+  @if (unitless($value) or unit($value)==em) {
+    @return 0em+$value;
+  }
+
+  @else {
+    @return 0em+strip-units($value) / 16;
+  }
+}
+
+@function convertPxToRem($px) {
+  @return 0rem+strip-units($px) / 16;
+}
+
+@mixin pxRem($property, $values) {
+  // Create a couple of empty lists as output buffers:
+  $px-values: ();
+  $rem-values: ();
+
+  // Ensure $values is a list.
+  @if type-of($values) !="list" {
+    $values: join((), $values);
+  }
+
+  // Loop through the $values list:
+  @each $value in $values {
+    @if type-of($value)==number and (unitless($value) or unit($value)==px) {
+      $px-values: join($px-values, 0px + ($value));
+      $rem-values: join($rem-values, convertPxToRem($value));
+    }
+
+    @else {
+      // No conversion:
+      $px-values: join($px-values, $value);
+      $rem-values: join($rem-values, $value);
+    }
+  }
+
+  #{$property}: $px-values;
+
+  // Don't add media query if it's not needed:
+  @if $px-values !=$rem-values {
+    // @media only all {
+    #{$property}: $rem-values;
+    // }
+  }
+}
+
+// === BUILD SPACE (margin, padding) === //
+// How to use: <div class="ml-5 mr-5 mx-5 my-5 m-5"></div>
+$spacePositions: ("x", "y", "*", "top", "left", "right", "bottom");
+$spaceSizes: 7;
+$paddingOrmargin: (m: "margin",
+  p: "padding",
+);
+
+@mixin buildPositionViaSize($type, $size) {
+  $getType: map-get($paddingOrmargin, $type);
+
+  @each $el in $spacePositions {
+    @if $el=="x" {
+      .#{$type}x-#{$size} {
+        #{$getType}-left: #{f-pxRem($size)} !important;
+        #{$getType}-right: #{f-pxRem($size)} !important;
+      }
+    }
+
+    @else if $el=="y" {
+      .#{$type}y-#{$size} {
+        #{$getType}-top: #{f-pxRem($size)} !important;
+        #{$getType}-bottom: #{f-pxRem($size)} !important;
+      }
+    }
+
+    @else if $el=="*" {
+      .#{$type}-#{$size} {
+        #{$getType}: #{f-pxRem($size)} !important;
+      }
+    }
+
+    @else {
+      .#{$type}#{str-slice($el, 1, 1)}-#{$size} {
+        #{$getType}-#{$el}: #{f-pxRem($size)} !important;
+      }
+    }
+  }
+}
+
+@mixin buildSpace($type) {
+  @for $i from 0 to $spaceSizes {
+    $size: $i * 5;
+    @include buildPositionViaSize($type, $size);
+  }
+
+  // Add value 'auto' for margin
+  @if $type=="m" {
+    @include buildPositionViaSize($type, "auto");
+  }
+}
+
+@include buildSpace("m"); // Margin
+@include buildSpace("p"); // Padding
+
+///-----------Custom
+@mixin col($num) {
+  align-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: calc(calc(100% - 20px * ($num - 1)) / $num);
+  justify-content: space-around;
+  flex-grow: 0 ;
+  justify-items: center;
+
+  .product-img {
+    overflow: hidden;
+    border-radius: 0.3rem;
+    width: fit-content;
+
+    img {
+      transition: transform 0.4s;
+    }
+  }
+}

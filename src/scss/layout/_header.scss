@@ -1,0 +1,39 @@
+.page-header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  * {
+    display: flex;
+    color: map-get($colors, white);
+  }
+  .container {
+    padding-inline: 20px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .header-menu {
+      gap: 20px;
+      a {
+        font-size: 15px;
+        font-weight: map-get($font-weight, medium);
+      }
+    }
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      i {
+        margin-left: 10px;
+      }
+    }
+    .logo {
+      // justify-self: center
+      align-self: center;
+    }
+    .header-action {
+      gap: 10px;
+      padding-inline: 40px;
+    }
+  }
+}
