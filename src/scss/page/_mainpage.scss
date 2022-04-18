@@ -196,11 +196,3 @@
     }
   }
 }
-
-@include respond-below(medium) {
-  .section-best-selling {
-    .col-6 {
-      @include col(1);
-    }
-  }
-}

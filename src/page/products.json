@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "Name": "form egg slicer",
+    "img": "https://themes.the4.co/kalles-html/assets/images/home-decor/pr-09.jpg",
+    "price": "35.00"
+  },
+  {
+    "id": 2,
+    "Name": "cymbal pendant",
+    "img": "https://themes.the4.co/kalles-html/assets/images/home-decor/pr-01.jpg",
+    "price": "35.00",
+    "sale": "25.00"
+  },
+  {
+    "id": 3,
+    "Name": "chair wood legs",
+    "img": "https://themes.the4.co/kalles-html/assets/images/home-decor/pr-03.jpg",
+    "price": "30.00"
+  },
+  {
+    "id": 4,
+    "Name": "light oil lamp",
+    "img": "https://themes.the4.co/kalles-html/assets/images/home-decor/pr-05.jpg",
+    "price": "65.00"
+  },
+  {
+    "id": 5,
+    "Name": "line cocktail shaker",
+    "img": "https://themes.the4.co/kalles-html/assets/images/home-decor/pr-07.jpg",
+    "price": "65.00"
+  },
+  {
+    "id": 6,
+    "Name": "piep show",
+    "img": "https://themes.the4.co/kalles-html/assets/images/home-decor/pr-11.jpg",
+    "price": "15.00"
+  },
+  {
+    "id": 7,
+    "Name": "herit chair",
+    "img": "https://themes.the4.co/kalles-html/assets/images/home-decor/pr-13.jpg",
+    "price": "55.00"
+  },
+  {
+    "id": 8,
+    "Name": "buddy table lamp",
+    "img": "https://themes.the4.co/kalles-html/assets/images/home-decor/pr-15.jpg",
+    "price": "35.00"
+  },
+  {
+    "id": 9,
+    "Name": "picto wall clock",
+    "img": "https://themes.the4.co/kalles-html/assets/images/home-decor/pr-17.jpg",
+    "price": "15.00"
+  },
+  {
+    "id": 10,
+    "Name": "brush set small",
+    "img": "https://themes.the4.co/kalles-html/assets/images/home-decor/pr-19.jpg",
+    "price": "35.00"
+  },
+  {
+    "id": 11,
+    "Name": "cru thermos jug",
+    "img": "https://themes.the4.co/kalles-html/assets/images/home-decor/pr-21.jpg",
+    "price": "45.00"
+  },
+  {
+    "id": 12,
+    "Name": "urkiola bowl",
+    "img": "https://themes.the4.co/kalles-html/assets/images/home-decor/pr-23.jpg",
+    "price": "85.00"
+  }
+]
