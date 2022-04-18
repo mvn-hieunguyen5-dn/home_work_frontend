@@ -171,22 +171,19 @@ $paddingOrmargin: (m: "margin",
 
 ///-----------Custom
 @mixin col($num) {
-  align-content: center;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
   width: calc(calc(100% - 20px * ($num - 1)) / $num);
-  justify-content: space-around;
-  flex-grow: 0 ;
-  justify-items: center;
-
+  a{
+    display: flex;
+    flex-direction: column;
+  }
   .product-img {
     overflow: hidden;
     border-radius: 0.3rem;
-    width: fit-content;
-
+    width: 100%;
+    flex-grow: 1;
     img {
       transition: transform 0.4s;
+      width: 100%;
     }
   }
 }

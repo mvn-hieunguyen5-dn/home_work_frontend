@@ -3,7 +3,6 @@ import React, { Component } from "react";
 export default class Product extends Component {
   render() {
     const {data} = this.props;
-    console.log(data);
     return (
       <li className="product-item col-6">
         <a href=".">
