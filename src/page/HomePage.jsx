@@ -3,13 +3,13 @@ import data from "./products.json";
 import Product from "./homepage/component/Product";
 import LightingCollection from "./homepage/component/LightingCollection";
 import BlogSection from "./homepage/component/BlogsSection";
-function HomePage() {
-  let itemList = [];
-  data.forEach((item) => {
-    itemList.push(<Product data={item} key={item.id}></Product>);
-  });
-  return (
-    <main className="page-main">
+
+import React, { Component } from 'react'
+
+export default class HomePage extends Component {
+  render() {
+    return (
+      <main className="page-main">
       <section className="section-page-introduction ">
         <LightingCollection />
       </section>
@@ -20,7 +20,11 @@ function HomePage() {
           <p className="script">
             Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor!
           </p>
-          <ul className="product-line">{itemList}</ul>
+          <ul className="product-line">
+            {
+              data.map((item)=>(<Product data={item} key={item.id}></Product>) )
+            }
+          </ul>
 
           <a className="black-button" href=".">
             Load more <FontAwesomeIcon icon="fa-solid fa-arrow-right-long" />
@@ -74,6 +78,7 @@ function HomePage() {
         </div>
       </section>
     </main>
-  );
+    )
+  }
 }
-export default HomePage;
+
