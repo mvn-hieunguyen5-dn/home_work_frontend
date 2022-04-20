@@ -13,15 +13,15 @@
   }
 }
 
-.App-header {
+.App-main {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
+  flex-wrap: nowrap;
+  align-content: center;
 }
 
 .App-link {
@@ -32,7 +32,145 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.section-input {
+  background-color: #393E46;
+  border-radius: 15px;
+  margin: 20px;
+  padding: 10px;
+}
+
+label {
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: dashed aliceblue solid;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+}
+
+.formInput {
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #222831;
+  outline: none;
+  color: white;
+  font-size: 25px;
+}
+
+.formInput:focus {
+  border: #FFD369 2px solid;
+}
+
+.description {
+  resize: none;
+  overflow: hidden;
+  min-height: 100px;
+  max-height: 200px;
+}
+
+.button {
+  background-color: #FFD369;
+  outline: none;
+  border: none;
+  margin: 5px 2px;
+  color: #282c34;
+  font-weight: 600;
+}
+
+.button:hover {
+  background-color: #282c34;
+  color: #FFD369;
+
+}
+
+.button:active {
+  border: #FFD369 2px solid;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+
+.section-table {
+  background-color: #FFD369;
+  border-radius: 15px;
+  margin: 20px;
+  padding: 10px;
+}
+
+tr {
+  border: 2px solid;
+  border-collapse: collapse;
+
+}
+
+thead {
+  background-color: #393E46;
+  color: #FFD369;
+  font-size: 20px;
+
+  /* 12px */
+}
+
+tbody {
+  background-color: #282c34;
+  font-size: 20px;
+}
+
+td {
+  padding-inline: 20px;
+
+}
+
+thead>tr>td:first-child {
+  border-top-left-radius: 0.75rem;
+  /* 12px */
+
+}
+
+thead>tr>td:last-child {
+  border-top-right-radius: 0.75rem;
+}
+tbody>tr:last-child>td:first-child{
+  border-bottom-left-radius: 0.75rem;
+}
+tbody>tr:last-child>td:last-child{
+  border-bottom-right-radius: 0.75rem;
+}
+
+.deleteButton {
+  background-color: #393e4600;
+  font-size: 25px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  height: 100%;
+  border-bottom-right-radius: 0.75rem;
+  margin-top: 4px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.deleteButton:hover {
+  color: #FFD369;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
 }
