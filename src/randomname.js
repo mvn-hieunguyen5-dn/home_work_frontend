@@ -2868,5 +2868,9 @@ function generateName() {
     capFirst(name2[getRandomInt(0, name2.length + 1)]);
   return name;
 }
-
-export  {generateName} ;
+function generateCountry() {
+  const country = ["VN", "US", "JP"];
+  var name = capFirst(country[getRandomInt(0, country.length + 1)]);
+  return name;
+}
+export { generateName, generateCountry };

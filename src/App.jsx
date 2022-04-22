@@ -3,26 +3,28 @@ import "./App.css";
 import React, { Component } from "react";
 import UserTableRow from "./userTableRow";
 
-import { generateName } from "./randomname.js";
+import { generateName, generateCountry } from "./randomname.js";
 export default class App extends Component {
   constructor() {
     super();
     this.state = {
       list: [],
       id: 1,
-      username: generateName(),
-      password: generateName(),
+      username: "",
+      password: "",
       gender: "",
       country: "VN",
       description: "",
-      checked: false,
+      checked: 0,
     };
     this.handleSubmit.bind(this);
     this.handOnChange.bind(this);
     this.delete.bind(this);
+    this.autoFill.bind(this);
   }
-  handleSubmit(evt) {
-    evt.preventDefault();
+  handleSubmit(evt = null) {
+    if (evt !== null) evt.preventDefault();
+    
     this.setState({ id: this.state.id + 1 });
     this.state.list.push({
       id: this.state.id,
@@ -34,11 +36,23 @@ export default class App extends Component {
       checked: this.state.checked,
     });
     this.setState({
+      username: "",
+      password: "",
+      gender: "0",
+      description: "",
+      checked: this.state.checked,
+    });
+  }
+  autoFill() {
+    this.setState({ id: this.state.id + 1 });
+    this.state.list.push({
+      id: this.state.id,
       username: generateName(),
       password: generateName(),
-      gender: "0",
+      gender: (Math.floor(Math.random() * 6) % 2).toString(),
+      country: generateCountry(),
       description: generateName(),
-      checked: this.state.checked,
+      checked: Math.floor(Math.random() * 6) % 2,
     });
   }
   handOnChange(evt) {
@@ -57,6 +71,7 @@ export default class App extends Component {
     const even = (item) => item.id === id;
     return list.findIndex(even);
   }
+
   render() {
     return (
       <div>
@@ -80,6 +95,7 @@ export default class App extends Component {
                     onChange={(e) => {
                       this.handOnChange(e);
                     }}
+                    required
                   />
                 </div>
                 <div className="block">
@@ -92,6 +108,7 @@ export default class App extends Component {
                     onChange={(e) => {
                       this.handOnChange(e);
                     }}
+                    required
                   />
                 </div>
                 <div className="block">
@@ -160,10 +177,22 @@ export default class App extends Component {
                       this.handOnChange(e);
                     }}
                     value="true"
+                    required
                   />
                   <label htmlFor="accept"> I agree to Teams of Service</label>
                 </div>
-                <button className="formInput button">Submit</button>
+                <div className="block">
+                  <button className="formInput button">Submit</button>
+                  <button
+                    className="formInput button"
+                    type="button"
+                    onClick={() => {
+                      this.autoFill();
+                    }}
+                  >
+                    Auto fill
+                  </button>
+                </div>
               </form>
             </div>
           </section>

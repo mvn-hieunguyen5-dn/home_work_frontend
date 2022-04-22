@@ -22,6 +22,7 @@
   color: white;
   flex-wrap: nowrap;
   align-content: center;
+  justify-content: space-around;
 }
 
 .App-link {
