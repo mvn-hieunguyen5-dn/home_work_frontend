@@ -1,9 +1,8 @@
 import "./App.css";
 
 import React, { Component } from "react";
-import UserTableRow from "./userTableRow";
-
-import { generateName, generateCountry } from "./randomname.js";
+import Table from "./component/table";
+import { generateName, generateCountry } from "./logic/randomname.js";
 export default class App extends Component {
   constructor() {
     super();
@@ -24,7 +23,7 @@ export default class App extends Component {
   }
   handleSubmit(evt = null) {
     if (evt !== null) evt.preventDefault();
-    
+
     this.setState({ id: this.state.id + 1 });
     this.state.list.push({
       id: this.state.id,
@@ -197,29 +196,7 @@ export default class App extends Component {
             </div>
           </section>
           <section className="section-table">
-            <table>
-              <thead>
-                <tr>
-                  <td>ID</td>
-                  <td>Username</td>
-                  <td>Password</td>
-                  <td>Gender</td>
-                  <td>Country</td>
-                  <td>Decription</td>
-                  <td>Checked</td>
-                  <td>Action</td>
-                </tr>
-              </thead>
-              <tbody>
-                {this.state.list.map((item) => (
-                  <UserTableRow
-                    data={item}
-                    key={item.id}
-                    delete={(e) => this.delete(e)}
-                  />
-                ))}
-              </tbody>
-            </table>
+          <Table data={this.state.list} delete={(e) => this.delete(e)} ></Table>
           </section>
         </main>
       </div>
