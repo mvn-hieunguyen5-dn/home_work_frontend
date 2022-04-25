@@ -4,7 +4,6 @@ export default class Form extends Component {
   constructor() {
     super();
     this.state = {
-      list: [],
       id: 1,
       username: "",
       password: "",
@@ -22,15 +21,7 @@ export default class Form extends Component {
     if (evt !== null) evt.preventDefault();
 
     this.setState({ id: this.state.id + 1 });
-    this.state.list.push({
-      id: this.state.id,
-      username: this.state.username,
-      password: this.state.password,
-      gender: this.state.gender,
-      country: this.state.country,
-      description: this.state.description,
-      checked: this.state.checked,
-    });
+    //-------------------------
     this.setState({
       username: "",
       password: "",
