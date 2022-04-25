@@ -1,0 +1,8 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  th, td {
+    @include pxRem(padding, 10);
+    border: 1px solid map-get($colors, border-gray);
+  }
+}

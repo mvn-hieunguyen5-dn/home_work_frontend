@@ -1,0 +1,61 @@
+//  map-get($h-font-size, h4); //
+// === Font === //
+$font-body: "Open Sans", sans-serif;
+
+// === Font Weight === //
+$font-weight: (
+  normal: 400,
+  medium: 600,
+  bold: 700,
+);
+
+// == Breakpoints === //
+$breakpoints: (
+  small: 480px,
+  medium: 768px,
+  wide: 960px,
+  large: 1024px,
+  largest: 1280px,
+);
+
+// === Colors === //
+$colors: (
+  primary: #333,
+  white: #fff,
+  black: #112,
+  txt-black: rgb(0, 0, 0),
+  txt-white: rgb(255, 255, 255),
+  txt-gray-dark: rgb(216, 59, 59),
+  txt-gray: #939394,
+  background1: #ffff,
+  background2: #F2F2F4,
+);
+
+// === z-index === //
+$zindexs: (
+  dropdown: 1000,
+  sticky: 1020,
+  fixed: 1030,
+  modal-backdrop: 1040,
+  modal: 1050,
+  popover: 1060,
+  tooltip: 1070,
+);
+
+// === Typography === //
+$font-size-base: 0.875rem !default; // 14px
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-sm: $font-size-base * 0.875 !default;
+
+$h-font-size: (
+  h1: $font-size-base * 4.5,
+  h2: $font-size-base * 4,
+  h3: $font-size-base * 2.5,
+  h4: $font-size-base * 1.5,
+  h5: $font-size-base 
+);
+
+$inline: (
+  small: 20px,
+  medium : 40px
+);
