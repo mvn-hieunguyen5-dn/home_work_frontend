@@ -57,4 +57,7 @@ header {
   z-index: map-get($zindexs, sticky);
 }
 
-
+.flex {
+  display: flex;
+  align-items: center;
+}

@@ -12,6 +12,7 @@ export default class Product extends Component {
           <p className="product-name">{data.Name}</p>
           <p className="product-price">{data.price}</p>
         </a>
+        <div></div>
       </li>
     );
   }

@@ -172,18 +172,5 @@ $paddingOrmargin: (m: "margin",
 ///-----------Custom
 @mixin col($num) {
   width: calc(calc(100% - 20px * ($num - 1)) / $num);
-  a{
-    display: flex;
-    flex-direction: column;
-  }
-  .product-img {
-    overflow: hidden;
-    border-radius: 0.3rem;
-    width: 100%;
-    flex-grow: 1;
-    img {
-      transition: transform 0.4s;
-      width: 100%;
-    }
-  }
+  
 }

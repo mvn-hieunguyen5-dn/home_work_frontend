@@ -85,6 +85,21 @@
   }
   .col-6 {
     @include col(6);
+    filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+    a{
+      display: flex;
+      flex-direction: column;
+    }
+    .product-img {
+      overflow: hidden;
+      border-radius: 0.5rem;
+      width: 100%;
+      flex-grow: 1;
+      img {
+        transition: transform 0.4s;
+        width: 100%;
+      }
+    }
     :hover {
       img {
         transform: scale(1.2);
@@ -156,6 +171,11 @@
       justify-content: center;
       display: flex;
     }
+  }
+  .svg-inline--fa {
+    width: 30px;
+    height: 30px;
+    margin-inline: 10px;
   }
 }
 
