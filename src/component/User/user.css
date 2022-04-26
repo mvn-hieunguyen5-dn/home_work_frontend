@@ -1,0 +1,77 @@
+* {
+  font-size: 20px;
+  color: #FFD369;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.userlist {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: calc(280px*3);
+  justify-content: space-around;
+}
+
+.usercard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: #222831;
+  border-radius: 10px;
+
+}
+
+.child {
+  transition-delay: 1s;
+  transition: transform 330ms ease-in-out;
+}
+
+.child:hover {
+  transform: scale(110%);
+}
+
+.avatar {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.email {
+  font-size: 15px;
+}
+
+.pagination {
+  display: flex;
+  width: full;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px;
+}
+
+.pagi-button {
+  padding: 10px 20px;
+  border: 2px #FFD369 solid;
+  color: #FFD369;
+  background-color: #222831;
+}
+
+.pagi-button:hover {
+  background-color: #222831;
+  color: #FFD369;
+  cursor: pointer;
+}
+
+.current {
+  padding: 10px 20px;
+  border: 2px #FFD369 solid;
+  color: #222831;
+  background-color: #FFD369;
+}
