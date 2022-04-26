@@ -1,0 +1,60 @@
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+  @include pxRem("padding", 8);
+  @include pxRem("height", 40);
+  @include pxRem(border-radius, 8);
+  width: 100%;
+  border: 1px solid map-get($colors, border-gray);
+  color: map-get($colors, txt-primary);
+  background: map-get($colors, white);
+  outline: none;
+  transition: border-color 0.4s;
+  display: block;
+  -webkit-appearance: none;
+  transition: border-color 0.4s, box-shadow 0.4s;
+  &:focus {
+    border-color: map-get($colors, action-blue);
+    box-shadow: 0 0 0 1px map-get($colors, action-blue);
+  }
+  &:disabled,
+  &.disabled {
+    background: map-get($colors, bg-gray-light);
+    border-color: map-get($colors, bg-gray-light);
+    color: map-get($colors, txt-disabled);
+  }
+  &::placeholder {
+    color: map-get($colors, txt-disabled);
+  }
+  &[readonly] {
+    border-color: map-get($colors, border-gray);
+    box-shadow: none;
+  }
+}
+
+// Remove icon eye in Edge
+input {
+  &::-ms-clear,
+  &::-ms-reveal {
+    display: none;
+  }
+}
+
+// Prevent resize horizontal
+textarea {
+  resize: vertical;
+}
+
+// Label
+label {
+  @include pxRem(margin-bottom, 5);
+  display: block;
+}
+
+// Group form control
+.form-group {
+  @include pxRem(margin-bottom, 20);
+}
