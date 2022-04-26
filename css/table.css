@@ -1,0 +1,116 @@
+table {
+  border-collapse: collapse;
+  font-size: 20px;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  margin-top: 50px;
+  table-layout: auto;
+  width: 100%;
+}
+
+thead {
+  background-color: #ffd369;
+  font-weight: 600;
+}
+tbody > tr:hover {
+  background-color: #3a4352;
+}
+
+tr {
+  border: 1px solid #393e46;
+  -webkit-transition: background 0.2s; /* For Safari 3.0 to 6.0 */
+  transition: background 0.3s;
+}
+tr:nth-child(2n) {
+  background: #393E46;
+}
+td {
+  padding: 10px 5px;
+  word-wrap: normal;
+}
+tbody {
+  background-color: #222831;
+  color: white;
+}
+button {
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  border: 0px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.status0 {
+  background-color: #116530;
+}
+.status2 {
+  background-color: #171010;
+}
+.status1 {
+  background-color: #c84b31;
+}
+.tag {
+  color: white;
+  padding: 1px 5px;
+  border-radius: 0.2rem;
+  text-align: center;
+  margin-bottom: 2px;
+  width: fit-content;
+}
+#status {
+  height: 70px;
+  width: 100%;
+  font-size: 20px;
+}
+#status[value="Done"] {
+  color: #c84b31;
+}
+.status[text="table[i].status"] {
+  color: #c84b31;
+}
+.light {
+  background-color: #ffd369;
+  font-weight: 600;
+  color: black;
+}
+img {
+  object-fit: cover;
+}
+.none {
+  padding: 0;
+}
+.deleteB {
+  font-size: 20px;
+  color: #f24a72;
+}
+.deleteB:hover {
+  color: wheat;
+}
+.goDetail {
+  color: wheat;
+}
+.goDetail:hover {
+  color: #ffd369;
+}
+.editShipInput {
+  height: 50px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffd369;
+  border: 0;
+  border-bottom: 2px solid #ffd369;
+  background-color: #22283100;
+  outline: none;
+}
+.editShipInput:focus {
+  border-bottom: 2px solid #ffff;
+}
+.editShipInput > option {
+  background-color: #222831;
+}
+.editShipInput > option:hover {
+  color: #ff0000;
+  background-color: #222831;
+}
+#shipImg {
+  width: 600px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tracking</title>
+  <link rel="stylesheet" href="css/root.css">
+  <link rel="stylesheet" href="css/table.css">
+  <link rel="stylesheet" href="css/trackingTable.css">
+  <script src="https://kit.fontawesome.com/8b76271ca4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <main>
+    <section class="left-bar" id="left-bar">
+    </section>
+    <section class="content">
+      <div class="container">
+        <h1>Cargo tracking table</h1>
+        <div class="action">
+          <input type="text" class="searchbox" placeholder="Search by ID" id="searchbyID">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <td class="desktop">Id*</td>
+              <td class="desktop">ShipID</td>
+              <td class="desktop">Company</td>
+              <td class="desktop">From</td>
+              <td class="desktop">To</td>
+              <td class="desktop">Status</td>
+              <td class="desktop">Action</td>
+            </tr>
+          </thead>
+          <tbody id="body">
+            <tr>
+              <td colspan="7">#Error: something went wrong, make sure youre enble javascript</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>* ID syntax: [ Ship ID ] - [ spring, summer, autumn, winter ] - [ year ]</p>
+      </div>
+    </section>
+  </main>
+  <script src="js/index.js"></script>
+  <script type="module" src="js/tracking.js"></script>
+
+</body>
+
+</html>

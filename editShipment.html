@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit shipment</title>
+  <link rel="stylesheet" href="css/root.css">
+  <link rel="stylesheet" href="css/table.css">
+  <script src="https://kit.fontawesome.com/8b76271ca4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <main>
+    <section class="left-bar" id="left-bar">
+    </section>
+    <section class="content">
+      <div class="container">
+        <form action="" id="editform" method="get">
+          <h1>Edit shipment </h1>
+          <table>
+            <thead>
+              <tr>
+                <td colspan="5">Shipment report ID : <span id="sid"></span> </td>
+
+              </tr>
+            </thead>
+            <tbody id="body">
+              <tr>
+                <td class="light">Ship ID</td>
+                <td><select id="shipID" class="editShipInput" required>elec
+                  </select></td>
+                <td class="light">Company:</td>
+                <td> <input class="editShipInput" type="text" id="comName"></td>
+                <td rowspan="4" class="none"><img id="shipImg" src="./src/loading-page.gif" height="300px"
+                    width="500px">
+                </td>
+              </tr>
+              <tr>
+                <td class="light">Ship name:</td>
+                <td id="shipName">N/A</td>
+                <td class="light">Status:</td>
+                <td>
+                  <select id="status" class="editShipInput">
+                    <option value="On-going">On-going</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Complete">Complete</option>
+                  </select>
+                </td>
+                </td>
+              </tr>
+              <tr>
+                <td class="light">Departure place:</td>
+                <td>
+                  <select id="from" class="editShipInput">
+                    <option value="Vietnam">Vietnam</option>
+                    <option value="Russia">Russia</option>
+                    <option value="United States">United States</option>
+                    <option value="China">China</option>
+                    <option value="South Korean">South Korean</option>
+                    <option value="Chile">Chile</option>
+                  </select>
+                </td>
+                <td class="light">Landing place:</td>
+                <td>
+                  <select id="to" class="editShipInput">
+                    <option value="Vietnam">Vietnam</option>
+                    <option value="Russia">Russia</option>
+                    <option value="United States">United States</option>
+                    <option value="China">China</option>
+                    <option value="South Korean">South Korean</option>
+                    <option value="Chile">Chile</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td class="light">Start date:</td>
+                <td id="from"><input class="editShipInput" type="date" name="" id="startDate"></td>
+                <td class="light">End date:</td>
+                <td id="to"><input class="editShipInput" type="date" name="" id="endDate"></td>
+              </tr>
+              <tr>
+                <td class="light">License code:</td>
+                <td id="lcode">N/A</td>
+                <td class="light">Expired:</td>
+                <td id="exdate">N/A</td>
+                <td class="light">Unique characteristics</td>
+              </tr>
+              <tr>
+                <td class="light">*Tonnage:</td>
+                <td>N/A</td>
+                <td class="light">*Type:</td>
+                <td id="shipType">N/A</td>
+                <td>N/A</td>
+              </tr>
+
+            </tbody>
+          </table>
+          <span>* : ship information</span>
+          <div class="action">
+            <button class="ebutton" onclick="window._turnDetail()" type="button">
+              <i class="fa-solid fa-angles-left"></i>
+              Cancel
+            </button>
+            <button class="edbutton" type="submit">
+              <i class="fa-solid fa-pen-to-square"></i>
+              Edit
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </section>
+  </main>
+  <script type="module" src="js/index.js"></script>
+  <script type="module" src="js/editShipment.js"></script>
+
+</body>
+
+</html>
