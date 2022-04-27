@@ -1,6 +1,6 @@
 import React from "react";
 // import { generateName, generateCountry } from "../logic/randomname.js";
-import useFill from "../logic/useFill";
+import useFill from "../../logic/useFill";
 export default function Form(props) {
   const { data, setValue } = useFill();
   // const username = useFill('username');

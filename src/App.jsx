@@ -1,9 +1,9 @@
 import "./App.css";
 
 import React, { Component } from "react";
-import Table from "./component/table";
+import Table from "./component/AccountTable";
 import User from "./component/User";
-import Form from "./component/Form";
+import Form from "./component/AccountTable/RegisterForm";
 export default class App extends Component {
   constructor() {
     super();

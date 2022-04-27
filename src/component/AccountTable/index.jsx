@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Item from "./Item";
+import Item from "./Account_Item";
 export default class table extends Component {
   delete(id) {
     if (window.confirm('Are you sure want to delete this Item ?')) {

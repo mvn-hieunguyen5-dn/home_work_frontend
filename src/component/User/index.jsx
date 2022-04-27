@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./user.css";
-import Pagination from "./pagination";
+import Pagination from "./UserPagination";
 export default function User() {
   const [data, setData] = useState({ data: [] });
   const [page, setPage] = useState(1);

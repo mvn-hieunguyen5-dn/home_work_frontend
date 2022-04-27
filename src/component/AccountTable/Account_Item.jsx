@@ -7,7 +7,7 @@ export default class userTableRow extends Component {
         <td>{this.props.data.id}</td>
         <td>{this.props.data.username}</td>
         <td>{this.props.data.password}</td>
-        <td>{this.props.data.gender === "0" ? "male" : "female"}</td>
+        <td>{this.props.data.gender === 0 ? "male" : "female"}</td>
         <td>{this.props.data.country}</td>
         <td>{this.props.data.description}</td>
         <td>
