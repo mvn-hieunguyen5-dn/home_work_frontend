@@ -9,7 +9,7 @@ export default class table extends Component {
   }
   render() {
     return (
-      <table>
+      <table className="table">
         <thead>
           <tr>
             <td>ID</td>

@@ -1,7 +1,7 @@
 import "./App.css";
 
 import React, { Component } from "react";
-// import Table from "./component/table";
+import Table from "./component/table";
 import User from "./component/User";
 import Form from "./component/Form";
 export default class App extends Component {
@@ -9,15 +9,10 @@ export default class App extends Component {
     super();
     this.state = {
       list: [],
-      id: 1,
-      username: "",
-      password: "",
-      gender: "",
-      country: "VN",
-      description: "",
-      checked: 0,
+      id: 0,
     };
     this.delete.bind(this);
+    this.add.bind(this);
   }
 
   delete(e) {
@@ -30,23 +25,32 @@ export default class App extends Component {
     const even = (item) => item.id === id;
     return list.findIndex(even);
   }
+  add(item) {
+    this.setState({ id: this.state.id + 1 });
+    this.state.list.push({ ...item, id: this.state.id });
+  }
 
   render() {
     return (
       <div>
         <main className="App-main">
-          <section className="section input">
-            <Form />
-          </section>
-          {/* <section className="section-table">
-            <Table
-              data={this.state.list}
-              delete={(e) => this.delete(e)}
-            ></Table>
-          </section> */}
-          <section className="section">
-            <User />
-          </section>
+          <div className="flex">
+            <section className="section input">
+              <Form addItem={(i) => this.add(i)} />
+            </section>
+
+            <section className="section">
+              <User />
+            </section>
+          </div>
+          <div className="flex">
+            <section className="section-table ">
+              <Table
+                data={this.state.list}
+                delete={(e) => this.delete(e)}
+              ></Table>
+            </section>
+          </div>
         </main>
       </div>
     );

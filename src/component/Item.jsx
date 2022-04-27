@@ -18,7 +18,7 @@ export default class userTableRow extends Component {
         </td>
         <td className="flex">
           <button
-            className="deleteButton"
+            className="deleteButton flex"
             onClick={() => {
               this.props.delete(this.props.data.id)
             }}

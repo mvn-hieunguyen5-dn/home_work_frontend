@@ -2,7 +2,7 @@ import { useState } from "react";
 export default function useFill() {
   const [data, setData] = useState({
     username: "",
-    passsword: "",
+    password: "",
     gender: 0,
     country: "VN",
     description: "",
@@ -13,7 +13,7 @@ export default function useFill() {
       setData({ ...data, username: val });
     },
     passsword: function (val = "") {
-      setData({ ...data, passsword: val });
+      setData({ ...data, password: val });
     },
     gender: function (val = 0) {
       setData({ ...data, gender: parseInt(val) });
@@ -26,6 +26,16 @@ export default function useFill() {
     },
     checked: function (val = "") {
       setData({ ...data, checked: val });
+    },
+    clear: function () {
+      setData({
+        ...data,
+        username: "",
+        password: "",
+        gender: 0,
+        country: "VN",
+        description: ""
+      });
     },
   };
   return { data, setData, setValue };

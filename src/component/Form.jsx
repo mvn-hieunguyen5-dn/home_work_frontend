@@ -1,14 +1,20 @@
 import React from "react";
 // import { generateName, generateCountry } from "../logic/randomname.js";
 import useFill from "../logic/useFill";
-export default function Form() {
-  const { data, setData, setValue } = useFill();
+export default function Form(props) {
+  const { data, setValue } = useFill();
   // const username = useFill('username');
+  function submit(e) {
+    const t = data;
+    e.preventDefault();
+    console.log(t);
+    props.addItem(t);
+    setValue.clear();
+  }
   return (
     <div className="container">
       <h2>Form</h2>
       <form
-        action=""
         onSubmit={(e) => {
           this.handleSubmit(e);
         }}
@@ -101,7 +107,15 @@ export default function Form() {
           <label htmlFor="accept"> I agree to Teams of Service</label>
         </div>
         <div className="block">
-          <button className="formInput button">Submit</button>
+          <button
+            className="formInput button"
+            type="submit"
+            onClick={(e) => {
+              submit(e);
+            }}
+          >
+            Submit
+          </button>
           <button
             className="formInput button"
             type="button"

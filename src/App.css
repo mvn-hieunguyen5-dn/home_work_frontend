@@ -16,8 +16,7 @@
 .App-main {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  align-items: flex-start;
+  
   font-size: calc(10px + 2vmin);
   color: white;
   flex-wrap: nowrap;
@@ -100,7 +99,8 @@ label {
 .flex {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -109,6 +109,7 @@ label {
   border-radius: 15px;
   margin: 20px;
   padding: 10px;
+  width: fit-content;
 }
 
 tr {
@@ -116,7 +117,9 @@ tr {
   border-collapse: collapse;
 
 }
-
+.table {
+  /* width: 100%; */
+}
 thead {
   background-color: #393E46;
   color: #FFD369;
@@ -147,21 +150,21 @@ thead>tr>td:last-child {
 tbody>tr:last-child>td:first-child{
   border-bottom-left-radius: 0.75rem;
 }
-tbody>tr:last-child>td:last-child{
-  border-bottom-right-radius: 0.75rem;
-}
 
 .deleteButton {
-  background-color: #393e4600;
-  font-size: 25px;
+  background-color: #B33030;
+  font-size: 20px;
   color: white;
   border: none;
   cursor: pointer;
   height: 100%;
-  border-bottom-right-radius: 0.75rem;
+  border-radius: 0.1rem;
   margin-top: 4px;
   display: flex;
   flex-wrap: nowrap;
+  margin-block: 5px;
+  padding: 5px 10px;
+  gap: 5px;
 }
 
 .deleteButton:hover {
