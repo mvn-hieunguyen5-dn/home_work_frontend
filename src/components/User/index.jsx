@@ -18,7 +18,7 @@ export default function User() {
   }, [page]);
 
   return (
-    <>
+    <div className="main">
       <h2>User table</h2>
       <div className="userlist">
         {data.data.map((user) => (
@@ -35,6 +35,6 @@ export default function User() {
         ))}
       </div>
       <Pagination page={page} switch={(page)=>{setPage(page)}} />
-    </>
+    </div>
   );
 }

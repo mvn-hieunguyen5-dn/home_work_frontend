@@ -9,11 +9,14 @@ h2 {
 
 .userlist {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   flex-wrap: wrap;
   width: calc(280px*3);
-  justify-content: space-around;
+  justify-content: center;
+  list-style-type:none;
+  width: 100%;
+  align-items: stretch
 }
 
 .usercard {
@@ -23,7 +26,8 @@ h2 {
   padding: 10px;
   background-color: #222831;
   border-radius: 10px;
-
+  width: 250px;
+  
 }
 
 .child {
@@ -36,7 +40,7 @@ h2 {
 }
 
 .avatar {
-  height: 200px;
+  height: 250px;
   width: 200px;
   object-fit: cover;
   border-radius: 15px;

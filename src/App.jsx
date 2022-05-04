@@ -1,58 +1,37 @@
 import "./asset/css/App.css";
 
-import React, { Component } from "react";
-import Table from "./components/AccountTable";
-import User from "./components/User";
-import Form from "./components/AccountTable/RegisterForm";
-export default class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      list: [],
-      id: 0,
-    };
-    this.delete.bind(this);
-    this.add.bind(this);
-  }
+// import React, { Component } from "react";
+import Header from "./components/layout/header";
+import Home from "./pages/home";
+// import Form from "./components/Auth/logInForm";
+import Authen from "./pages/authen";
+import ProductPage from "./pages/product";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React, { Suspense } from "react";
 
-  delete(e) {
-    const list = this.state.list;
-    list.splice(this.isduplication(this.state.list, e), 1);
-    console.log(list);
-    this.setState({ list: list });
-  }
-  isduplication(list, id) {
-    const even = (item) => item.id === id;
-    return list.findIndex(even);
-  }
-  add(item) {
-    this.setState({ id: this.state.id + 1 });
-    this.state.list.push({ ...item, id: this.state.id });
-  }
+export default function App() {
+  
+  return (
+    <>
+      <Router>
+        <div className="main">
+          <Header />
+          <Suspense>
+            <Switch>
+              <Route path="/product">
+                <ProductPage />
+              </Route>
 
-  render() {
-    return (
-      <div>
-        <main className="App-main">
-          <div className="flex">
-            <section className="section input">
-              <Form addItem={(i) => this.add(i)} />
-            </section>
-
-            <section className="section">
-              <User />
-            </section>
-          </div>
-          <div className="flex">
-            <section className="section-table ">
-              <Table
-                data={this.state.list}
-                delete={(e) => this.delete(e)}
-              ></Table>
-            </section>
-          </div>
-        </main>
-      </div>
-    );
-  }
+              <Route path="/auth">
+                <Authen />
+              </Route>
+              <Route path="/">
+                <Home />
+              </Route>
+            </Switch>
+          </Suspense>
+        </div>
+      </Router>
+    </>
+  );
 }
