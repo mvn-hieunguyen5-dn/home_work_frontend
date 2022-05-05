@@ -16,7 +16,8 @@ h2 {
   justify-content: center;
   list-style-type:none;
   width: 100%;
-  align-items: stretch
+  align-items: stretch;
+  padding: 0px;
 }
 
 .usercard {
@@ -29,7 +30,17 @@ h2 {
   width: 250px;
   
 }
+.toDetail {
+  background-color: #FFD369;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color:#222831;
+  text-decoration: none;
+}
 
+.blank {
+  flex-grow: 1;
+}
 .child {
   transition-delay: 1s;
   transition: transform 330ms ease-in-out;
@@ -38,7 +49,13 @@ h2 {
 .child:hover {
   transform: scale(110%);
 }
-
+.img-container {
+  height: 250px;
+  width: 200px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
 .avatar {
   height: 250px;
   width: 200px;
@@ -46,7 +63,13 @@ h2 {
   border-radius: 15px;
   overflow: hidden;
 }
-
+.heart {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 30px;
+  color: #F55353;
+}
 .email {
   font-size: 15px;
 }

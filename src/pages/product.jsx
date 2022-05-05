@@ -1,7 +1,8 @@
 import React, { Suspense } from "react";
-import { BrowserRouter as Switch, Route } from "react-router-dom";
+import { BrowserRouter as Switch, Route, useRouteMatch } from "react-router-dom";
 
-export default function product() {
+export default function Product() {
+  let { path } = useRouteMatch();
   const ProductList = React.lazy(() =>
     import("../components/Fearture/ProductList")
   );
@@ -12,10 +13,10 @@ export default function product() {
     <>
       <Suspense fallback={<div>Loading...</div>}>
         <Switch>
-          <Route exact path="/product/detail/:id">
+          <Route path={`${path}/:id`}>
             <ProductDetail />
           </Route>
-          <Route exact path="/product">
+          <Route exact path={path} >
             <ProductList />
           </Route>
         </Switch>

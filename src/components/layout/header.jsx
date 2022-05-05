@@ -1,9 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import { useSelector } from "react-redux";
 export default function Header() {
   // const user = JSON.parse(localStorage.getItem('user'));
   const { isLogged, logout, user } = useAuth();
+  const favs = useSelector((state) => state.fav.value);
   return (
     <>
       <header className="header wrap-content wrap-between">
@@ -37,6 +39,14 @@ export default function Header() {
             <>
               <li>
                 <NavLink activeClassName="active" to="/auth/MyAccount">
+                  <span>
+                    <i class="fa-regular fa-heart"></i>
+                    {favs.length}
+                  </span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink activeClassName="active" to="/auth/MyAccount">
                   <span>{user.email}</span>
                 </NavLink>
               </li>
@@ -46,7 +56,10 @@ export default function Header() {
                   onClick={() => logout()}
                   to="/auth/login"
                 >
-                  <span> <i className="fa-solid fa-door-open"></i> Logout</span>
+                  <span>
+                    {" "}
+                    <i className="fa-solid fa-door-open"></i> Logout
+                  </span>
                 </NavLink>
               </li>
             </>

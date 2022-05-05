@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./product.css";
-import { Link } from "react-router-dom";
+import ProductItem from "./productItem";
 export default function ProductList() {
   const [data, setData] = useState([]);
 
@@ -21,22 +21,11 @@ export default function ProductList() {
       <h2>Product Table</h2>
       <ul className="userlist">
         {data.map((item) => (
-          <li className="usercard" key={item.id}>
-            <Link
-              className="usercard"
-              
-              to={`/product/detail/${item.id}`}
-            >
-              <div className="avatar">
-                <img src={item.image} alt="" className="avatar child" />
-              </div>
-
-              <h3>{item.title}</h3>
-              <span className="email">$ {item.price}</span>
-            </Link>
-          </li>
+          <ProductItem item={item} key={item.id}>
+          </ProductItem>
         ))}
       </ul>
+      
     </div>
   );
 }
