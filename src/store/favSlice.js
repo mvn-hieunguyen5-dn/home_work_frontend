@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   value: [],
 };
+//Giá trị mặc định
 
 export const favSlice = createSlice({
   name: "favorite",
@@ -18,6 +19,7 @@ export const favSlice = createSlice({
     },
   },
 });
+//Set event
 
 export const { toggle } = favSlice.actions;
 export default favSlice.reducer;
