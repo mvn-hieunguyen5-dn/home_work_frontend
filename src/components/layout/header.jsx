@@ -6,6 +6,7 @@ export default function Header() {
   // const user = JSON.parse(localStorage.getItem('user'));
   const { isLogged, logout, user } = useAuth();
   const favs = useSelector((state) => state.fav.value);
+  console.log(process.env.REACT_APP_TEST);
   return (
     <>
       <header className="header wrap-content wrap-between">
@@ -40,7 +41,7 @@ export default function Header() {
               <li>
                 <NavLink activeClassName="active" to="/auth/MyAccount">
                   <span>
-                    <i class="fa-regular fa-heart"></i>
+                    <i className="fa-regular fa-heart"></i>
                     {favs.length}
                   </span>
                 </NavLink>
